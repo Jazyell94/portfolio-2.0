@@ -1,0 +1,251 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+    --primary-color: #ff0000;
+    --secondary-color: #00ff00;
+    --background-color: #000000;
+    --text-color-primary: #ffffff;
+    --text-color-secondary: #b3b3b3;
+    --font-family-primary: "Poppins", sans-serif;
+    --font-family-secondary: "Jost", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62,5%;
+}
+body {
+    color: var(--text-color-primary);
+    background-color: var(--background-color);
+}
+
+.hero-section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 8rem;
+}
+.hero-section header {
+    width: 100%;
+    max-width: 1500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.hero-section header .logo h1 {
+    font-size: 2rem;
+    font-family: var(--font-family-primary);
+
+    text-transform: uppercase;
+}
+.hero-section header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+.hero-section header nav ul li a {
+    text-decoration: none;
+    color: var(--text-color-primary);
+    font-family: var(--font-family-secondary);
+}
+.hero-section main {
+    text-align: center;
+}
+.hero-section main h1 {
+    font-size: 6rem;
+    font-family: "Poppins", sans-serif;
+    letter-spacing: -3px;
+}
+.hero-section main p {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    text-align: center;
+    font-family: var(--font-family-secondary);
+    color: var(--text-color-secondary);
+}
+.hero-section main .download-cv {
+    margin-top: 2.5rem;
+    padding: 0.5rem 1.5rem;
+    border: 2px solid var(--text-color-primary);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: var(--font-family-secondary);
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-color-primary);
+    background: transparent;
+    cursor: pointer;
+}
+
+.carrosel-section {
+    background-color: #fff;
+    width: 100%;
+    height: 5rem;
+    overflow: hidden;
+    margin-top: 2rem;
+}
+.carrosel-section .carrosel-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1.5rem;
+    gap: 6rem;
+    animation: slide 9s linear infinite;
+}
+.carrosel-section .carrosel-content p {
+    font-family: var(--font-family-primary);
+    font-size: 1.2rem;
+    color: #000;
+}
+.carrosel-section .carrosel-content span {
+    white-space: nowrap;
+}
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+.about-section {
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 8rem;
+    margin-top: 2rem;
+    overflow: hidden;
+}
+.about-section .about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    width: 100%;
+    max-width: 1500px;
+    height: 100%;
+}
+.about-section .about-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+.about-section .about-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.about-section .about-description {
+    padding-left: 1rem;
+}
+.about-section .about-description h1 {
+    font-family: var(--font-family-primary);
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    margin-top: 1rem;
+}
+.about-section .about-description .description-text1 {
+    margin-top: 1rem;
+    font-family: var(--font-family-secondary);
+}
+.about-section .about-description .description-infos {
+    border-radius: 8px;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.about-section .about-description .description-infos p {
+    font-family: var(--font-family-secondary);
+    color: var(--text-color-secondary);
+}
+.about-section .about-description .description-infos p span {
+    color: var(--text-color-primary);
+}
+.about-section .about-description .download-cv {
+    margin-top: 2.5rem;
+    padding: 0.5rem 1.5rem;
+    border: none;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: var(--font-family-secondary);
+    font-size: 1rem;
+    font-weight: 500;
+    color: #000;
+    background: var(--text-color-primary);
+    cursor: pointer;
+}
+
+.services-section {
+    width: 100%;
+    margin-top: 2rem;
+    padding: 2rem 8rem;
+}
+.services-section h1 {
+    font-family: var(--font-family-primary);
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+.services-section .services-cards {
+    max-width: 1500px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+.services-section .services-cards .card {
+    background-color: #333333;
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 1rem;
+}
+.services-section .services-cards .card h2 {
+    font-family: var(--font-family-primary);
+    font-size: 1.5rem;
+}
+.services-section .services-cards .card p {
+    font-family: var(--font-family-secondary);
+    color: var(--text-color-secondary);
+}
+.services-section .services-cards .card a {
+    font-family: var(--font-family-secondary);
+}
+.services-section .services-infos {
+    max-width: 1500px;
+    margin-top: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.services-section .services-infos .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.services-section .services-infos .box h2 {
+    font-family: var(--font-family-secondary);
+    font-size: 2rem;
+}
+.services-section .services-infos .box p {
+    font-family: var(--font-family-secondary);
+}
