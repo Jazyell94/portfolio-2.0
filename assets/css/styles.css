@@ -24,45 +24,38 @@ html {
 body {
     color: var(--text-color-primary);
     background-color: var(--background-color);
-    
 }
 
-.hero-section {
+header {
     width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    padding: 2rem 8rem;
-}
-.hero-section header {
-    width: 100%;
-    max-width: var(--max-width);
+    height: 4rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 1rem;
 }
-.hero-section header .logo h1 {
-    font-size: 2rem;
+header .logo h1 {
+    font-size: 1.3rem;
     font-family: var(--font-family-primary);
-
     text-transform: uppercase;
 }
-.hero-section header nav ul {
+header nav ul {
     list-style: none;
     display: flex;
     gap: 1rem;
+    display: none;
 }
-.hero-section header nav ul li a {
+header nav ul li a {
     text-decoration: none;
     color: var(--text-color-primary);
     font-family: var(--font-family-secondary);
 }
+
 .hamburger {
+
   width: 26px;
   height: 18px;
-  display: none;
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
   cursor: pointer;
@@ -84,27 +77,39 @@ body {
 .hamburger.active span:nth-child(3) {
   transform: rotate(-45deg) translate(5px, -5px);
 }
-.hero-section main {
+
+
+
+.hero-section {
+    width: 100%;
+    height: calc(100dvh - 4rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+.hero-section .main {
+    width: 100%;
     text-align: center;
 }
-.hero-section main h1 {
-    font-size: 6rem;
+.hero-section .main h1 {
+    font-size: 3rem;
     font-family: "Poppins", sans-serif;
-    letter-spacing: -3px;
+    line-height: 3.5rem;
 }
-.hero-section main p {
-    font-size: 1.5rem;
+.hero-section .main p {
+    font-size: 1rem;
     margin-top: 1rem;
     text-align: center;
     font-family: var(--font-family-secondary);
     color: var(--text-color-secondary);
 }
-.hero-section main .download-cv {
-    margin-top: 2.5rem;
-    padding: 0.5rem 1.5rem;
-    border: 2px solid var(--text-color-primary);
+.hero-section .main .download-cv {
+    margin-top: 2rem;
+    padding: 0.4rem 1rem;
+    border: 1px solid var(--text-color-primary);
     text-decoration: none;
-    text-transform: uppercase;
     font-family: var(--font-family-secondary);
     font-size: 1rem;
     font-weight: 500;
@@ -112,7 +117,7 @@ body {
     background: transparent;
     cursor: pointer;
 }
-.hero-section footer {
+.hero-section .footer {
     width: 100%;
     display: flex;
     align-items: center;
@@ -120,45 +125,15 @@ body {
     gap: 3rem;
     padding: 0;
 }
-.hero-section footer i {
+.hero-section .footer i {
     font-size: 2rem;
 }
-
-@media (max-width: 960px) {
-    .hero-section {
-        padding: 2rem 4rem;
-    }
-    .hero-section header nav ul{
-        display: none;
-    }
-    .hamburger {
-        display: flex;
-    }
-}
-@media (max-width: 760px) {
-    .hero-section header .logo h1 {
-        font-size: 1.5rem;
-    }
-    .hero-section main h1 {
-        font-size: 4.5rem;
-    }
-    .hero-section main p {
-        font-size: 1rem;
-    }
-    .hero-section main .download-cv {
-        font-size: 0.5rem;
-    }
-    .hero-section footer i {
-        font-size: 1.5rem;
-    }
-}
-
 
 
 .carrosel-section {
     background-color: #fff;
     width: 100%;
-    height: 5rem;
+    height: 4rem;
     overflow: hidden;
     margin-top: 2rem;
 }
@@ -170,11 +145,12 @@ body {
     justify-content: space-between;
     padding: 0 1.5rem;
     gap: 6rem;
-    animation: slide 9s linear infinite;
+    animation: slide 2s linear infinite;
 }
 .carrosel-section .carrosel-content p {
     font-family: var(--font-family-primary);
-    font-size: 1.2rem;
+    font-size: 1rem;
+    font-weight: 600;
     color: #000;
 }
 .carrosel-section .carrosel-content span {
@@ -190,29 +166,24 @@ body {
     }
 }
 
+
 .about-section {
     width: 100%;
-    min-height: 70vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 2rem 8rem;
+    padding: 1rem;
     margin-top: 2rem;
-    overflow: hidden;
 }
 .about-section .about-content {
-    border: 1px solid red;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
     width: 100%;
     max-width: var(--max-width);
     height: 100%;
 }
 .about-section .about-img {
-    border: 1px solid red;
     width: 100%;
-    height: 70vh;
+    height: auto;
+    max-height: 70vh;
     object-fit: cover;
     overflow: hidden;
 }
@@ -222,7 +193,7 @@ body {
     object-fit: contain;
 }
 .about-section .about-description {
-    padding-left: 1rem;
+
 }
 .about-section .about-description h1 {
     font-family: var(--font-family-primary);
@@ -261,26 +232,12 @@ body {
     background: var(--text-color-primary);
     cursor: pointer;
 }
-@media (max-width: 960px) {
-    .about-section {
-        padding: 2rem 4rem;
-    }
-}
-@media (max-width: 860px) {
-    .about-section .about-content {
-        grid-template-columns: 1fr;
-    }
-    .about-section .about-img {
-        height: 20rem !important; 
-    }
-    
 
-}
 
 .services-section {
     width: 100%;
     margin-top: 2rem;
-    padding: 2rem 8rem;
+    padding: 2rem;
 }
 .services-section h1 {
     font-family: var(--font-family-primary);
@@ -314,6 +271,8 @@ body {
 }
 .services-section .services-cards .card a {
     font-family: var(--font-family-secondary);
+    color: #3e51fa;
+    font-size: 1rem;
 }
 .services-section .services-infos {
     max-width: var(--max-width);
@@ -337,10 +296,9 @@ body {
 }
 
 .projects-section {
-    border: 1px solid red;
     width: 100%;
     margin-top: 2rem;
-    padding: 2rem 8rem;
+    padding: 1rem;
 }
 .projects-section h1 {
     font-family: var(--font-family-primary);
@@ -357,18 +315,6 @@ body {
 }
 .projects-section .project1, .project2, .project3, .project4 {
     height: 30rem;
-}
-.projects-section .project1 {
-    margin-top: 0;
-}
-.projects-section .project2 {
-    margin-top: 4rem;
-}
-.projects-section .project3 {
-    margin-top: 8rem;
-}
-.projects-section .project4 {
-    margin-top: 12rem;
 }
 .projects-section .project-img {
     height: 80%;
@@ -404,9 +350,8 @@ body {
 }
 
 .contact-section {
-    border: 1px solid red;
     margin-top: 2rem;
-    padding: 2rem 8rem;
+    padding: 1rem;
 }
 .contact-section h1 {
     font-family: var(--font-family-primary);
@@ -417,13 +362,13 @@ body {
 .contact-section .contact-content {
     max-width: var(--max-width);
     margin: 0 auto;
-    border: 1px solid red;
+    
 }
 .contact-section .contact-content .contact-infos {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    border: 1px solid red;
 }
 .contact-section .contact-content .contact-infos .box {
     display: flex;
@@ -448,15 +393,16 @@ body {
     border-radius: 15px 0;
 }
 .contact-section .contact-content .contact-infos .box i {
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 .contact-section .contact-content .contact-infos .box p {
     font-family: var(--font-family-secondary);
-    font-size: 1.3rem;
+    font-size: 1rem;
 }
 .contact-section .contact-content .contact-form {
-    margin-top: 6rem;
+    margin-top: 2rem;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     gap: 2rem;
 }
@@ -466,7 +412,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 2rem;
+    
 }
 .contact-section .contact-content .contact-form .text h2 {
     font-family: var(--font-family-secondary);
@@ -474,7 +420,7 @@ body {
 }
 .contact-section .contact-content .contact-form .text p {
     font-family: var(--font-family-secondary);
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin-top: 1rem;
     text-align: center;
 }
@@ -486,7 +432,7 @@ body {
     width: 100%;
     margin-bottom: 1rem;
     background: none;
-    border: 2px solid var(--text-color-secondary);
+    border: 1px solid var(--text-color-secondary);
     padding: .8rem 1rem; 
 }
 .contact-section .contact-content .contact-form .form input::placeholder {
@@ -516,19 +462,19 @@ body {
 }
 
 footer {
-        border: 1px solid red;
     margin-top: 4rem;
-    padding: 2rem 8rem 0 8rem;
+    padding: 1rem
 }
 footer .footer-content {
     border-top: 1px solid var(--text-color-secondary) ;
     max-width: var(--max-width);
     margin: 0 auto;
-    padding: 2rem 0;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    gap: 1rem;
+    gap: 1.5rem;
+    padding-top: 1rem;
 }
 footer .footer-content .box {
     flex: 1;
@@ -548,6 +494,8 @@ footer .footer-content .box i {
 }
 footer .footer-content .links {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: space-around;
 }
 footer .footer-content .icons {
@@ -562,6 +510,6 @@ footer .footer-content .icons {
     padding: 1rem 0;
     font-family: var(--font-family-secondary);
     text-align: center;
-    padding-bottom: 4rem;
+    padding-bottom: 1rem;
 }
 
