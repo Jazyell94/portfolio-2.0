@@ -192,9 +192,6 @@ header nav ul li a {
     height: 100%;
     object-fit: contain;
 }
-.about-section .about-description {
-
-}
 .about-section .about-description h1 {
     font-family: var(--font-family-primary);
     font-size: 2rem;
@@ -507,9 +504,10 @@ footer .footer-content .icons {
 
 
 .copyright {
+    margin-top: 1rem;
     padding: 1rem 0;
     font-family: var(--font-family-secondary);
     text-align: center;
-    padding-bottom: 1rem;
+    font-size: .8rem;
 }
 
