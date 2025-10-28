@@ -394,7 +394,7 @@ header nav ul li a {
 }
 .contact-section .contact-content .contact-infos .box p {
     font-family: var(--font-family-secondary);
-    font-size: .5rem;
+    font-size: .8rem;
 }
 .contact-section .contact-content .contact-form {
     margin-top: 2rem;
@@ -508,6 +508,6 @@ footer .footer-content .icons {
     padding: 1rem 0;
     font-family: var(--font-family-secondary);
     text-align: center;
-    font-size: .5rem;
+    font-size: .8rem;
 }
 
